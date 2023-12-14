@@ -1,0 +1,130 @@
+.thumbnail{
+  width: 100%;
+}
+.video-title{
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.video-title-link,
+.video-author-link{
+  text-decoration: none;
+  color: inherit
+}
+.video-author,
+.video-stats{
+  display: block;
+  font-size: 12px;
+  color:rgb(96, 96, 96);
+}
+.video-author{
+  margin-bottom: 4px;
+}
+.video-info-grid{
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+.profile-picture{
+  width: 36px;
+  border-radius: 50px;
+  background-color: grey;
+}
+.thumbnail-row{
+  margin-bottom: 8px;
+  position: relative;
+}
+.video-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+
+@media (max-width: 750px) {
+  .video-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(min-width: 751px) and (max-width: 999px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .video-title{
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .video-author,
+  .video-stats{
+    font-size: 14px;
+  }
+}
+
+.video-time{
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px;
+  border-radius: 2px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+}
+
+.channel-picture{
+  position: relative;
+}
+
+.channel-picture .tooltip{
+  position: absolute;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  bottom: -60px;
+  width: 220px;
+  z-index: 50;
+  flex: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: opacity 0.15s;
+
+  pointer-events: none;
+  
+}
+.tooltip-picture{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+.tooltip-info{
+  display: flex;
+  flex-direction: column;
+  line-height:22px;
+}
+.tooltip-name{
+  font-size: 18px;
+  font-weight: 800;
+}
+.tooltip-subscribers{
+  font-size: 15px;
+  color: rgb(83, 83, 83);
+}
+.channel-picture:hover .tooltip{
+  opacity: 1;
+}
